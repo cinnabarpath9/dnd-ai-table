@@ -1,0 +1,465 @@
+{
+  "title": "M2测试本·上·钟下的账",
+  "meta": {
+    "规则": "SRD 5.2 (2024)",
+    "时长": "测试用，不追求时长",
+    "人数": "3 AI + 1 真人",
+    "说明": "M2 上半（测试本）：7 场、2 战。目的只有一个——把引擎/提示词/模型的盲点跑出来，不追求文学性。每场的『探什么』见 docs/46-M2测试本覆盖清单.md。"
+  },
+  "acts": [
+    { "id": "act1", "title": "复勘", "scenes": ["a1", "a2"] },
+    { "id": "act2", "title": "闸房", "scenes": ["a3", "a4"] },
+    { "id": "act3", "title": "钟楼", "scenes": ["a5"] },
+    { "id": "act4", "title": "对岸与交代", "scenes": ["a6", "a7"] }
+  ],
+  "scenes": [
+    {
+      "id": "a1",
+      "title": "渡口复勘·天光",
+      "situation": "天亮后渡口空着，石阶上的水还没干；断缆被摆在阶上，渡船的船头陷进泥里，钟楼的门开着。",
+      "brief": {
+        "present": "艾尔玛蹲在断缆前看茬口，罗恩翻船底的积水，小翠沿石阶往上看钟楼，布兰守在灯柱下看对岸",
+        "span": "钟楼顶那一夜之后约三个时辰，天刚亮",
+        "offstage": "盲婆在钟楼底层收拾灯油，没有下楼；对岸的船搁浅着，甲板上有人影在动"
+      },
+      "narration": "晨光把雾压到水面上。断缆的茬口在光里发白，像一排没合上的牙。",
+      "threads": ["t1", "t2"],
+      "promises": ["p1", "p2"],
+      "world": {
+        "location": "雾渡口",
+        "location_description": "石阶、灯柱、搁浅的渡船，钟楼在坡上",
+        "date": "1492-10-04",
+        "period": "清晨",
+        "weather": "晴"
+      },
+      "effects": [
+        {
+          "name": "晨光刺眼",
+          "kind": "skill",
+          "object": "perception",
+          "value": -1,
+          "target": "party",
+          "scope": "scene"
+        }
+      ],
+      "clues": [
+        {
+          "id": "m2a-c1",
+          "text": "断缆的茬口一边发白一边发黑：白的割得早，黑的是后来补的一刀。",
+          "skill": "perception",
+          "dc": 10,
+          "secret": false,
+          "source": "有人割了两次缆绳，中间隔了一阵"
+        },
+        {
+          "id": "m2a-c2",
+          "text": "船头的泥里混着河底的黑沙，只有对岸那片浅滩才有这种沙。",
+          "skill": "investigation",
+          "dc": 15,
+          "secret": true,
+          "source": "船是从对岸推回来的"
+        }
+      ]
+    },
+    {
+      "id": "a2",
+      "title": "坡上茶棚·问话",
+      "situation": "坡上的茶棚刚支起棚布，守夜的老周在烧水；他认得老秦，也认得收税官的船。",
+      "brief": {
+        "present": "艾尔玛坐在老周对面问话，罗恩看茶棚后头的货堆，小翠数门口的车辙，布兰靠着柱子听",
+        "span": "从渡口上坡，约一刻钟",
+        "offstage": "老周的儿子昨夜替收税官搬过箱子，天亮前回家躲在里屋"
+      },
+      "narration": "老周把茶碗推过来，手在围裙上擦了两次，眼睛一直往屋里瞟。",
+      "threads": ["t1", "t2"],
+      "promises": ["p2"],
+      "world": {
+        "location": "坡上茶棚",
+        "location_description": "棚布、灶台、几条长凳，门口是上坡的土路",
+        "period": "清晨"
+      },
+      "effects": [
+        {
+          "name": "热茶下肚",
+          "kind": "ac",
+          "value": 1,
+          "target": "party",
+          "scope": "scene"
+        }
+      ],
+      "clues": [
+        {
+          "id": "m2a-c3",
+          "text": "车辙里嵌着税印箱盖的木屑，和闸房货箱上少的那个角对得上。",
+          "skill": "investigation",
+          "dc": 12,
+          "secret": true,
+          "source": "箱子是从茶棚后面推下坡的"
+        }
+      ]
+    },
+    {
+      "id": "a3",
+      "title": "闸房再战",
+      "situation": "闸房的货箱少了一半，地上全是新踩的水脚印；三只巨鼠和两个持棍的人从暗处冒出来，最远的贴着后墙。",
+      "brief": {
+        "present": "艾尔玛先进门，罗恩举灯照着后墙，小翠贴左墙绕，布兰堵住门口；三只巨鼠和两个走私客分布在货箱后与后墙",
+        "span": "从茶棚下坡，约两刻钟",
+        "offstage": "收税官的船在对岸收锚，等最后一批货"
+      },
+      "narration": "灯一晃，最近的老鼠先动了；后墙那两个人没有喊，只把棍子横过来。",
+      "threads": ["t1", "t2"],
+      "promises": ["p2"],
+      "beat_notes": {
+        "p2": "闸房里补过的那截缆绳和渡口的断缆是同一种麻：割缆的人来过这里"
+      },
+      "combat": {
+        "enemies": [["Giant Rat", 3], ["Bandit", 2]],
+        "distance": 35,
+        "rounds": 4
+      },
+      "effects": [
+        {
+          "name": "湿滑地面",
+          "kind": "attack",
+          "value": -1,
+          "target": "party",
+          "scope": "round",
+          "rounds": 2
+        }
+      ],
+      "world": {
+        "location": "闸房",
+        "location_description": "潮湿石屋，货箱堆在里侧，门后是水",
+        "period": "上午"
+      },
+      "clues": [
+        {
+          "id": "m2a-c4",
+          "text": "被撬开的箱子里垫着干草，草上压出了两个圆印，是灯座留下的。",
+          "skill": "perception",
+          "dc": 11,
+          "secret": false,
+          "source": "有人提着灯在箱子里翻过东西"
+        }
+      ]
+    },
+    {
+      "id": "a4",
+      "title": "闸房外·休整",
+      "situation": "打完闸房，罗恩的胳膊被咬开一道口子；四个人在闸房外的干地上歇脚，水还从门缝里往外淌。",
+      "brief": {
+        "present": "罗恩自己包扎胳膊，艾尔玛清点箭矢，小翠把湿斗篷晾在闸板上，布兰盯着下游的水面",
+        "span": "战斗结束后约一刻钟",
+        "offstage": "下游水寨的哨子响过两声，有人在水面上放了两盏灯"
+      },
+      "narration": "布条缠上去，血很快洇透一层。下游那两盏灯贴着水面走，不快，也不停。",
+      "threads": ["t1", "t3"],
+      "promises": ["p3"],
+      "beat_notes": {
+        "p3": "水寨方向放了两盏灯，方向正对着对岸的船"
+      },
+      "world": {
+        "location": "闸房外",
+        "location_description": "闸门前的干地，能看见下游的水面",
+        "period": "上午"
+      },
+      "clues": [
+        {
+          "id": "m2a-c5",
+          "text": "晾开的湿斗篷内衬里缝着一角账纸，上面只有半个日期和一个「寨」字。",
+          "skill": "perception",
+          "dc": 13,
+          "secret": true,
+          "source": "收税官的斗篷里缝着水寨的账纸"
+        }
+      ]
+    },
+    {
+      "id": "a5",
+      "title": "钟楼顶·第二波",
+      "situation": "钟楼顶的铜钟还在，两个溺死者从钟影里站起来；披斗篷的人退到钟后，手里攥着钟锤。",
+      "brief": {
+        "present": "艾尔玛先上最后一级台阶，罗恩举灯照钟影，小翠绕到钟后，布兰守住楼梯口；两个溺死者在钟两侧，披斗篷的人在钟后",
+        "span": "从闸房回渡口再上钟楼，约半个时辰",
+        "offstage": "盲婆把楼下的门从外面闩上了，正站在楼梯口听"
+      },
+      "narration": "钟锤举到一半停住。两个溺死者的水滴在石面上，声音比钟还密。",
+      "threads": ["t1", "t3"],
+      "promises": ["p4"],
+      "combat": {
+        "enemies": [["Ghoul", 2], ["Cultist", 1]],
+        "distance": 10,
+        "rounds": 3
+      },
+      "effects": [
+        {
+          "name": "钟声压耳",
+          "kind": "save",
+          "object": "constitution",
+          "value": -1,
+          "target": "all",
+          "scope": "scene"
+        }
+      ],
+      "world": {
+        "location": "钟楼顶",
+        "location_description": "铜钟、钟锤，能看见对岸的船",
+        "period": "午后"
+      },
+      "clues": [
+        {
+          "id": "m2a-c6",
+          "text": "钟锤的系绳上有一小段新换的麻绳，颜色比旁边浅，打的结是水寨人常用的双套结。",
+          "skill": "investigation",
+          "dc": 14,
+          "secret": true,
+          "source": "水寨的人来过钟楼顶，换过钟锤的系绳"
+        }
+      ]
+    },
+    {
+      "id": "a6",
+      "title": "对岸的船",
+      "situation": "退潮后能涉水到对岸。船搁浅在浅水里，船舷挂着水草，甲板上有一只被撬开的箱子。",
+      "brief": {
+        "present": "艾尔玛涉水先到，罗恩扶着船帮上船，小翠在船尾找字，布兰留在岸上看渡口",
+        "span": "钟楼顶结束后约半个时辰",
+        "offstage": "收税官已经从船的另一侧下水，往下游去了；船上只剩一个不会水的伙计"
+      },
+      "narration": "船身每晃一下，水就从裂开的船板里冒上来一点。箱盖开着，里面只剩干草。",
+      "threads": ["t1", "t2", "t3"],
+      "promises": ["p2", "p3"],
+      "beat_notes": {
+        "p3": "船尾漆下刻着水寨的记号，和水寨的灯是同一套"
+      },
+      "world": {
+        "location": "对岸",
+        "location_description": "浅水里的搁浅船和对岸的泥滩",
+        "period": "下午"
+      },
+      "clues": [
+        {
+          "id": "m2a-c7",
+          "text": "箱子内壁留着税库封条的残胶，胶里还粘着一小片盖印的纸角。",
+          "skill": "investigation",
+          "dc": 14,
+          "secret": true,
+          "source": "箱子是从税库直接搬出来的"
+        },
+        {
+          "id": "m2a-c8",
+          "text": "船尾的漆下刻着三道水纹和水寨的记号，刻得很深，是常年顺手刻的。",
+          "skill": "perception",
+          "dc": 16,
+          "secret": true,
+          "source": "这条船常来水寨，不是第一次"
+        }
+      ]
+    },
+    {
+      "id": "a7",
+      "title": "章末·交代",
+      "situation": "四个人回到渡口，把船上的箱子和断缆摆在石阶上；盲婆终于下楼，手里端着那盏油灯。",
+      "brief": {
+        "present": "艾尔玛把箱子摆开，罗恩记下船尾的记号，小翠把账纸摊在石阶上，布兰看着盲婆；盲婆端灯站在阶下",
+        "span": "从对岸回来，约两刻钟",
+        "offstage": "水寨那边已经知道船被查了，正在收灯"
+      },
+      "narration": "盲婆把灯放在石阶上，灯芯剪得很短。她说：「第三声是我敲的。你们要问的不是钟。」",
+      "threads": ["t1", "t2", "t3"],
+      "promises": ["p1", "p2", "p3", "p4"],
+      "pays": ["p1", "p2", "p4"],
+      "beat_notes": {
+        "p1": "黑蜡是盲婆自己涂的：她要看谁碰过第三根钟绳",
+        "p2": "割缆的是收税官，补刀的是水寨的人；两拨人不是一条心",
+        "p4": "盲婆敲第三声是想让老秦去救人，没想到把溺死者引上岸"
+      },
+      "world": {
+        "location": "雾渡口",
+        "location_description": "傍晚的石阶，箱子、断缆和账纸摊在地上",
+        "period": "傍晚",
+        "weather": "阴"
+      },
+      "clues": [
+        {
+          "id": "m2a-c9",
+          "text": "盲婆的灯罩内侧熏着一层新黑，是这两天点的；她一直在等人的方向看。",
+          "skill": "perception",
+          "dc": 12,
+          "secret": false,
+          "source": "盲婆这两夜一直在楼下守灯等消息"
+        }
+      ]
+    }
+  ],
+  "threads": [
+    {
+      "id": "t1",
+      "title": "第三声钟的账",
+      "kind": "main",
+      "summary": "钟是谁敲的、敲给谁听，谁该为溺死的人负责"
+    },
+    {
+      "id": "t2",
+      "title": "货从哪来、到哪去",
+      "kind": "main",
+      "summary": "税库的箱子经过闸房、茶棚、对岸的船，下一站在下游"
+    },
+    {
+      "id": "t3",
+      "title": "水寨的灯",
+      "kind": "side",
+      "summary": "下游水寨放灯、刻记号、换钟绳，他们在等这批货"
+    }
+  ],
+  "promises": [
+    {
+      "id": "p1",
+      "title": "钟绳上的黑蜡",
+      "tag": "motif",
+      "status": "open",
+      "summary": "黑蜡是盲婆做的记号，谁碰过第三根钟绳就留痕"
+    },
+    {
+      "id": "p2",
+      "title": "断缆上的两刀",
+      "tag": "setup_payoff",
+      "status": "open",
+      "summary": "割缆的是收税官，补刀的是水寨；两拨人不是一条心"
+    },
+    {
+      "id": "p3",
+      "title": "水寨的灯",
+      "tag": "open_question",
+      "status": "open",
+      "summary": "下游水寨放灯、刻记号，等着接这批货；这一章不收"
+    },
+    {
+      "id": "p4",
+      "title": "盲婆为什么敲第三声",
+      "tag": "setup_payoff",
+      "status": "open",
+      "summary": "她敲第三声是想让老秦去救人，结果把溺死者引上了岸"
+    }
+  ],
+  "decisions": [
+    {
+      "id": "d1",
+      "what": "a3 的战斗距离写 35 尺（触及+移动力的边界），a5 写 10 尺",
+      "why": "35 尺正好等于『触及 5 + 移动 30』，验自动接敌的边界；10 尺验『原本就在触及内』不该多走路",
+      "risk": "假模型可能直接选移动而错过攻击；这本身就是要看的信号"
+    },
+    {
+      "id": "d2",
+      "what": "a2 给队伍 AC +1、a3 给攻击 -1（轮次）、a5 给体质豁免 -1（全场）",
+      "why": "三种 kind 三种 scope 各来一次，验 H2b 挂载/到期/换场清理",
+      "risk": "效果叠在战斗里可能让判定偏保守，但测试本只看会不会挂错"
+    },
+    {
+      "id": "d3",
+      "what": "a6 放两条线索，一条 DC 14、一条 DC 16",
+      "why": "验高 DC 线索发现不了时，引擎不能暗示『这里有东西』",
+      "risk": "DC 16 在 3~4 级队伍手里长期发现不了，可能白写"
+    }
+  ],
+  "agenda": [
+    {
+      "who": "盲婆",
+      "next": "等玩家把对岸的东西摆到阶上，再决定说不说第三声的事",
+      "reentry": "a7 她下楼；若玩家没回渡口，她仍在钟楼底层",
+      "note": "黑蜡是她自己涂的，她知道第三声会引来什么"
+    },
+    {
+      "who": "老周",
+      "next": "把儿子藏在里屋，等收税官的人来问话时先说不知道",
+      "reentry": "a4 之后若玩家回茶棚，他仍在灶台边",
+      "note": "车辙里的木屑是他儿子推箱子留下的"
+    },
+    {
+      "who": "收税官·柯温",
+      "next": "从船的另一侧下水，往下游水寨去报信",
+      "reentry": "a6 只留船和伙计；本尊不在",
+      "note": "他知道水寨要的是箱子里的东西，不是货"
+    }
+  ],
+  "npcs": [
+    { "name": "盲婆", "role": "守钟人" },
+    { "name": "老周", "role": "茶棚老板" },
+    { "name": "收税官·柯温", "role": "买主" }
+  ],
+  "map": {
+    "places": [
+      {
+        "name": "雾渡口",
+        "region": "河湾",
+        "description": "石阶、灯柱和一条搁浅的渡船，钟楼在坡上",
+        "discovered": true,
+        "shop": ["Potion of Healing"]
+      },
+      {
+        "name": "坡上茶棚",
+        "region": "河湾",
+        "description": "土路边的茶棚，守夜的人在这里烧水",
+        "discovered": true,
+        "shop": ["Potion of Healing", "Rations"]
+      },
+      {
+        "name": "闸房",
+        "region": "下游",
+        "description": "堆着税印货箱的潮湿石屋",
+        "discovered": true
+      },
+      {
+        "name": "闸房外",
+        "region": "下游",
+        "description": "闸门前的干地，能看见下游的水面",
+        "discovered": true
+      },
+      {
+        "name": "钟楼",
+        "region": "渡口坡上",
+        "description": "底层挂钟绳，顶层挂铜钟",
+        "discovered": true
+      },
+      {
+        "name": "钟楼顶",
+        "region": "钟楼",
+        "description": "铜钟和钟锤，能看见对岸的船",
+        "discovered": true
+      },
+      {
+        "name": "对岸",
+        "region": "河对岸",
+        "description": "搁浅的船和泥滩，退潮时能涉水过去",
+        "heard": true
+      },
+      {
+        "name": "水寨",
+        "region": "下游",
+        "description": "水面上的木寨，门口挂两盏灯",
+        "heard": true
+      }
+    ],
+    "passages": [
+      { "from": "雾渡口", "to": "坡上茶棚", "note": "上坡的土路", "known": true },
+      { "from": "坡上茶棚", "to": "闸房", "note": "下坡接下游泥路", "known": true },
+      { "from": "闸房", "to": "闸房外", "note": "闸门前的干地", "known": true },
+      { "from": "雾渡口", "to": "钟楼", "note": "坡上的石阶", "known": true },
+      { "from": "钟楼", "to": "钟楼顶", "note": "窄木梯", "known": true },
+      {
+        "from": "对岸",
+        "to": "雾渡口",
+        "note": "退潮时涉水，涨潮就断",
+        "known": true
+      },
+      {
+        "from": "对岸",
+        "to": "水寨",
+        "note": "顺水往下游，水面上的灯道",
+        "known": false,
+        "secret": "水寨的灯就是给这条水道点的"
+      }
+    ]
+  }
+}

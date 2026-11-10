@@ -1,0 +1,58 @@
+{
+  "format": "dnd-campaign-progress",
+  "version": 1,
+  "adventure": "哨塔的拖痕",
+  "scenes_done": [
+    "s1",
+    "s2",
+    "s3"
+  ],
+  "promises": {
+    "p2": {
+      "beats": [
+        {
+          "scene": "s1",
+          "note": "场景《荒径与哨塔》",
+          "at": "2026-11-03T23:53:54+00:00"
+        },
+        {
+          "scene": "s2",
+          "note": "场景《塔内一层》",
+          "at": "2026-11-03T23:53:54+00:00"
+        }
+      ],
+      "closed": false,
+      "closed_note": "",
+      "closed_at": ""
+    },
+    "p3": {
+      "beats": [
+        {
+          "scene": "s1",
+          "note": "场景《荒径与哨塔》",
+          "at": "2026-11-03T23:53:54+00:00"
+        },
+        {
+          "scene": "s2",
+          "note": "场景《塔内一层》",
+          "at": "2026-11-03T23:53:54+00:00"
+        }
+      ],
+      "closed": false,
+      "closed_note": "",
+      "closed_at": ""
+    },
+    "p1": {
+      "beats": [
+        {
+          "scene": "s3",
+          "note": "场景《楼梯口》",
+          "at": "2026-11-03T23:53:54+00:00"
+        }
+      ],
+      "closed": true,
+      "closed_note": "在场景《楼梯口》兑现",
+      "closed_at": "2026-11-03T23:53:54+00:00"
+    }
+  }
+}

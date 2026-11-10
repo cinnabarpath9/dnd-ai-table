@@ -1,0 +1,61 @@
+# NOTICE — 第三方材料与商标声明
+
+本项目（dnd-ai-table）自身代码与原创剧本按根目录 `LICENSE` 授权。
+**下列第三方材料不适用该协议**，各自遵循其原始条款。
+
+---
+
+## 1. SRD 5.2 数据（`engine/srd/data/`）
+
+`engine/srd/data/` 下的规则数据（能力、法术、怪物、装备、规则条目等）来自
+**System Reference Document 5.2**（SRD 5.2），版权所有 © Wizards of the Coast LLC。
+
+- 许可：**Creative Commons Attribution 4.0 International（CC-BY-4.0）**
+- 许可全文：<https://creativecommons.org/licenses/by/4.0/legalcode>
+- SRD 官方页面：<https://www.dndbeyond.com/srd>
+- 本项目的抓取入口：open5e API（`document__key=srd-2024`），见 `engine/srd/fetch.py`
+  与 `engine/srd/data/manifest.json`（含抓取时间与每个资源的 sha256）
+
+**署名要求（CC-BY-4.0 §3）**：再分发这些数据时，须保留上述署名、许可链接，
+并说明是否做过修改。本项目对原始数据做过结构重组与索引（`*.index.json`），
+这属于「修改」，须一并说明。
+
+---
+
+## 2. 商标
+
+**Dungeons & Dragons**、**D&D**、**Wizards of the Coast** 是 Wizards of the Coast LLC
+的商标或注册商标。
+
+本项目是**非官方粉丝作品**：
+
+- 与 Wizards of the Coast 无任何关联；
+- 未获其赞助、背书或批准；
+- 不授予使用者任何商标使用权。
+
+仓库名与发行名刻意不使用上述商标；文档中出现商标仅用于**说明规则体系来源**。
+
+---
+
+## 3. 未随仓库分发的材料
+
+以下内容因版权原因**不包含**在本仓库中：
+
+| 材料 | 原因 |
+|---|---|
+| 官方模组 PDF 及其改编数据（如《风骸岛之龙》） | 版权归 WotC，仅限个人持有者本地使用 |
+| 第三方创作者的角色卡、人设、世界书、预设 | 版权归各自作者 |
+| 他人项目的拆解笔记与交接文档 | 属于他人作品 |
+
+需要这些材料时，请自行通过合法渠道获取，并按各自许可使用。
+
+---
+
+## 4. 原创剧本
+
+`adventures/` 下的剧本（如《哨塔的拖痕》《雾渡的第三声钟》、M2 测试本系列）
+为本项目原创，随本项目 `LICENSE` 授权。
+
+---
+
+*本 NOTICE 会随依赖变化更新；发现遗漏请开 issue。*

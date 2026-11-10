@@ -1,0 +1,25 @@
+{
+  "format": "dnd-campaign-campaign",
+  "version": 1,
+  "title": "M2 测试本（三章）",
+  "chapters": [
+    {
+      "id": "ch1",
+      "title": "M2测试本·上·钟下的账",
+      "adventure": "M2测试本-上-钟下的账.json",
+      "rest": ""
+    },
+    {
+      "id": "ch2",
+      "title": "M2测试本·下·水寨的账",
+      "adventure": "M2测试本-下-水寨的账.json",
+      "rest": "long"
+    },
+    {
+      "id": "ch3",
+      "title": "M2测试本·续·上游的税关",
+      "adventure": "M2测试本-续-上游的税关.json",
+      "rest": "long"
+    }
+  ]
+}

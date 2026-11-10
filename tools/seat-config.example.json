@@ -1,0 +1,58 @@
+{
+  "defaults": {
+    "max_tokens": 12000,
+    "temperature": 0.7,
+    "timeout": 180
+  },
+  "seats": {
+    "dm": {
+      "model": "gemini-3.8-flash",
+      "base_url": "https://api.example.com/v1",
+      "api_key_env": "DND_RELAY_KEY",
+      "reasoning_effort": null
+    },
+    "planner": {
+      "model": "deepseek-v4.1-flash",
+      "base_url": "https://qianfan.baidubce.com/v2/tokenplan/personal",
+      "api_key_env": "QIANFAN_API_KEY",
+      "reasoning_effort": "low"
+    },
+    "pc:艾尔玛": {
+      "model": "deepseek-v4.1-flash",
+      "base_url": "https://qianfan.baidubce.com/v2/tokenplan/personal",
+      "api_key_env": "QIANFAN_API_KEY",
+      "reasoning_effort": "low"
+    },
+    "pc:罗恩": {
+      "model": "claude-haiku-5-5",
+      "base_url": "https://api.example.com/v1",
+      "api_key_env": "DND_RELAY_KEY",
+      "reasoning_effort": "medium",
+      "temperature": null
+    },
+    "pc:小翠": {
+      "model": "glm-5.3-flash",
+      "base_url": "https://qianfan.baidubce.com/v2/tokenplan/personal",
+      "api_key_env": "QIANFAN_API_KEY",
+      "reasoning_effort": null
+    },
+    "pc:布兰": {
+      "model": "minimax-m3.1-flash",
+      "base_url": "https://api.example.com/v1",
+      "api_key_env": "DND_RELAY_KEY",
+      "reasoning_effort": "low"
+    },
+    "pilot": {
+      "model": "deepseek-v4.1-flash",
+      "base_url": "https://qianfan.baidubce.com/v2/tokenplan/personal",
+      "api_key_env": "QIANFAN_API_KEY",
+      "reasoning_effort": "low"
+    },
+    "pc:*": {
+      "model": "deepseek-v4.1-flash",
+      "base_url": "https://qianfan.baidubce.com/v2/tokenplan/personal",
+      "api_key_env": "QIANFAN_API_KEY",
+      "reasoning_effort": "low"
+    }
+  }
+}

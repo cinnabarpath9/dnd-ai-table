@@ -1,0 +1,8 @@
+{
+  "format": "dnd-campaign-campaign",
+  "version": 1,
+  "title": "北境的拖痕",
+  "chapters": [
+    { "id": "ch1", "title": "哨塔的拖痕", "adventure": "哨塔的拖痕.json" }
+  ]
+}

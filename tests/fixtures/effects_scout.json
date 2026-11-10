@@ -1,0 +1,80 @@
+{
+  "title": "灰灯渡口（效果测试夹具）",
+  "meta": {
+    "用途": "H2b 临时修正的最小夹具：两场、只测场景效果与到期，不是可发布剧本。",
+    "规则": "SRD 5.2 (2024)",
+    "人数": "3 AI + 1 真人"
+  },
+  "scenes": [
+    {
+      "id": "s1",
+      "title": "坡上",
+      "situation": "渡口的石阶被雨水冲得发亮。你们站在坡顶，能看见下面的木栈桥和两盏没点的灯。",
+      "brief": {
+        "present": "四个人都站在坡顶；艾尔玛想先看栈桥，罗恩在数灯，小翠盯着水面，布兰压后",
+        "span": "从村口走过来用了半小时，天还没黑",
+        "offstage": "栈桥尽头的守夜人缩在棚里躲雨，暂时没发现坡上的人"
+      },
+      "narration": "雨刚停，坡顶的泥还是软的。下面的栈桥安静得不太对劲。",
+      "world": {
+        "location": "灰灯渡口",
+        "location_description": "半塌的木栈桥，两盏没点的灯",
+        "date": "1492-10-03",
+        "period": "黄昏",
+        "weather": "雨后"
+      },
+      "effects": [
+        {
+          "name": "坡顶视野",
+          "kind": "attack",
+          "value": 1,
+          "target": "party",
+          "scope": "scene"
+        },
+        {
+          "name": "雨后薄雾",
+          "kind": "skill",
+          "value": -1,
+          "object": "perception",
+          "target": "party",
+          "scope": "scene"
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "title": "栈桥湿滑",
+      "situation": "你们踏上栈桥，木板一踩就打滑。棚里的守夜人掀开帘子，两个拿短棍的人从桥头绕了出来。",
+      "brief": {
+        "present": "四个人都在栈桥中段；守夜人退到棚口，两名短棍手从桥头两侧逼近",
+        "span": "紧接上一场，只隔十几步路",
+        "offstage": "桥下水面有东西翻了一下，但没人看清"
+      },
+      "narration": "木板在脚下吱呀一声。湿滑的桥面让每一步都得算着走。",
+      "world": { "location": "灰灯渡口", "period": "黄昏" },
+      "combat": {
+        "enemies": [["Bandit", 2]],
+        "distance": 20,
+        "rounds": 3
+      },
+      "effects": [
+        {
+          "name": "湿滑桥面",
+          "kind": "save",
+          "value": -1,
+          "object": "dexterity",
+          "target": "party",
+          "scope": "round",
+          "rounds": 2
+        },
+        {
+          "name": "守夜人熟悉桥面",
+          "kind": "attack",
+          "value": 1,
+          "target": "enemy",
+          "scope": "scene"
+        }
+      ]
+    }
+  ]
+}

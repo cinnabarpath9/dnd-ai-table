@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# ── 本机运行时数据：不进仓库 ──────────────────────────────
+saves/
+characters/
+adventures/imported/
+adventures/*.progress.json
+# 例外：这份进度文件被文档当作样本引用，保留
+!adventures/哨塔的拖痕.progress.json
+
+# ── 真模型留痕：含长 prompt 与思考链，只留本地 ────────────
+tools/真模型记录/
+analysis/*.state.json
+analysis/*.webm
+analysis/*.log
+
+# ── 个人座位配置：含账号接入点 ID，不要公开 ──────────────
+tools/seat-config.wind-endpoints.json
+tools/seat-config.local.json
+
+# ── 密钥与环境 ──────────────────────────────────────────
+.env
+.env.*
+!.env.example
+settings.local.json
+*.local.json
+
+# ── 编辑器 / 系统 ───────────────────────────────────────
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── 测试产物 ────────────────────────────────────────────
+tests/_logs/
+tests/_last_report.json
+tests/_profiles/

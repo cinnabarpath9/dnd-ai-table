@@ -1,0 +1,10 @@
+{"id": "n01", "text": "塔门在风里吱呀作响，灰尘从门缝里往下跌。小翠蹲下去看地上的拖痕，罗恩把火把举高了一点，光顺着楼梯往上爬。", "forbidden": [], "expect": []}
+{"id": "n02", "text": "", "forbidden": [], "expect": ["empty"]}
+{"id": "n03", "text": "门开了。", "forbidden": [], "expect": ["too_short"]}
+{"id": "n04", "text": "塔门开了，灰尘落下来。``` 这一段不该出现在正文里 ``` 你们继续往里走。", "forbidden": [], "expect": ["markdown_fence"]}
+{"id": "n05", "text": "作为 AI，我不能继续这个场景，请调整提示词后重试。", "forbidden": [], "min_chars": 10, "expect": ["meta_leak"]}
+{"id": "n06", "text": "你掷出 d20=17，对抗 DC 14，检定成功，于是你发现了脚印。", "forbidden": [], "expect": ["dice_leak"]}
+{"id": "n07", "text": "你选择了 [a2] 观察，DM 说 AM0003 这条记忆被唤醒。", "forbidden": [], "min_chars": 10, "expect": ["id_leak"]}
+{"id": "n08", "text": "你低头看见地板上有一块松动的石板，下面压着一封信。", "forbidden": ["地板上有一块松动的石板"], "min_chars": 10, "expect": ["secret_leak"]}
+{"id": "n09", "text": "塔里很安静，只有风从破窗吹进来。塔里很安静，只有风从破窗吹进来。", "forbidden": [], "expect": ["repeat"]}
+{"id": "n10", "text": "风从破窗吹进来，灰尘在光里浮动。塔门在你们身后合上，楼梯向上延伸。", "forbidden": [], "max_chars": 20, "expect": ["too_long"]}
