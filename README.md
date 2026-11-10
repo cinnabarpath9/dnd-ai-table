@@ -1,4 +1,20 @@
-# D&D AI 跑团（dnd-ai-table）
+# D&D AI 跑团 · dnd-ai-table
+
+**规则归引擎，叙事归模型。** 你坐一个座位，其余玩家由大模型扮演。
+
+[![下载最新版](https://img.shields.io/github/v/release/cinnabarpath9/dnd-ai-table?style=flat-square&label=%E4%B8%8B%E8%BD%BD%E6%9C%80%E6%96%B0%E7%89%88&color=2ea44f)](https://github.com/cinnabarpath9/dnd-ai-table/releases/latest)
+[![爱发电](https://img.shields.io/badge/%E7%88%B1%E5%8F%91%E7%94%B5-%E6%84%9F%E8%B0%A2%E8%B5%9E%E5%8A%A9-ff7ab2?style=flat-square)](https://afdian.com/a/langrensha)
+[![QQ 群](https://img.shields.io/badge/QQ%E7%BE%A4-%E5%8A%A0%E7%BE%A4%E4%BA%A4%E6%B5%81-12b7f5?style=flat-square)](https://qm.qq.com/q/68VcRJr3Py)
+[![许可](https://img.shields.io/badge/%E8%AE%B8%E5%8F%AF-%E9%9D%9E%E5%95%86%E4%B8%9A%E6%BA%90%E7%A0%81%E5%8F%AF%E8%A7%81-2ea44f?style=flat-square)](LICENSE)
+[![同系列 · AI 狼人杀](https://img.shields.io/badge/%E5%90%8C%E7%B3%BB%E5%88%97-AI%20%E7%8B%BC%E4%BA%BA%E6%9D%80-6f42c1?style=flat-square)](https://github.com/cinnabarpath9/werewolf)
+
+> ☕ **[爱发电 · 感谢赞助](https://afdian.com/a/langrensha)**　·　💬 **[加入 Q 群交流](https://qm.qq.com/q/68VcRJr3Py)**
+> 　·　⬇ **[夸克网盘](https://pan.quark.cn/s/00bf04be5c63)** / **[百度网盘](https://pan.baidu.com/s/1WfrytBb-xyHMDLlZUIN9Hw)**（提取码 `vv9n`）
+>
+> 🎲 **同系列：[AI 狼人杀 · Werewolf](https://github.com/cinnabarpath9/werewolf)**
+> —— 两个项目同属「**AI 桌游**」系列：同一套「规则引擎 + 大模型同台」的思路，一个做狼人杀，一个做跑团。
+>
+> 📦 安装包、离线包统一放上面两个网盘（两套项目共用同一个分享目录）。
 
 一个**在本地跑**的 AI 跑团桌面：**1 个 DM + 1~5 名玩家**（真人 1 名 + 0~4 名 AI），
 规则数值由引擎算，模型只负责「出意图」和「写叙事」。
@@ -186,3 +202,40 @@ python tests\run_all.py t_combat   # 只跑名字里带 t_combat 的
 - **D&D / Dungeons & Dragons 是 Wizards of the Coast 的商标**。本项目是非官方粉丝作品，
   与 WotC 无关联、未获其背书。仓库名刻意不使用该商标。
 - 官方模组与第三方角色卡、预设**不随仓库分发**。
+
+---
+
+## AI 桌游系列
+
+两个项目是同一套思路的两条分支：**规则引擎负责算，模型负责演**。
+
+| 项目 | 是什么 | 仓库 |
+|---|---|---|
+| **AI 狼人杀 · Werewolf** | 你坐一个座位，其余座位由大模型扮演；完整规则引擎、信息隔离、语音、复盘 | [cinnabarpath9/werewolf](https://github.com/cinnabarpath9/werewolf) |
+| **D&D AI 跑团 · dnd-ai-table**（本项目） | 1 个 DM + 1~5 名玩家；骰子与战斗由引擎结算，DM 只写叙事 | 你正在看的这个 |
+
+两套项目**共用**：
+
+- 同一个 Q 群：[加群交流](https://qm.qq.com/q/68VcRJr3Py)
+- 同一个网盘目录：[夸克](https://pan.quark.cn/s/00bf04be5c63) / [百度](https://pan.baidu.com/s/1WfrytBb-xyHMDLlZUIN9Hw)（提取码 `vv9n`）
+- 同一个赞助入口：[爱发电](https://afdian.com/a/langrensha)
+
+---
+
+## 赞助与致谢
+
+这个项目是**一个人业余做的**，没有商业计划：不卖课、不卖服务、不做订阅。
+如果你觉得它有用，最直接的支持方式是——
+
+- ☕ **[爱发电 · 感谢赞助](https://afdian.com/a/langrensha)**：帮我付一点模型调用费；
+- 💬 **[加入 Q 群](https://qm.qq.com/q/68VcRJr3Py)**：报 bug、提需求、发你自己的剧本；
+- ⭐ **点个 Star**，或者把它转给同样在折腾 AI 跑团的人。
+
+### 致谢
+
+- **Wizards of the Coast**：公开 SRD 5.2，让非商业的个人项目有规则可依（CC-BY-4.0，见 [NOTICE](NOTICE)）；
+- **open5e**：提供 SRD 的结构化 API，`engine/srd/fetch.py` 直接基于它；
+- **Python 生态**：标准库 + 极少的第三方依赖，让这个项目能在任何装了 Python 的机器上跑起来；
+- **所有试玩、报错、挑刺的人**：这个项目的每一条「未验证」，都是被你们问出来的。
+
+> 赞助不附带任何特权：不插队、不定制、不改许可。项目怎么走，还是按 `docs/` 里那套判断来。
