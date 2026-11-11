@@ -71,9 +71,34 @@
 
 ---
 
+## 下载
+
+| 包 | 适合 | 要先装什么 |
+|---|---|---|
+| `dnd-ai-table-0.1.0-pc-desktop.zip` | Windows / macOS / Linux | Python 3.11+，**不用**装第三方库 |
+| `dnd-ai-table-0.1.0-phone-termux.zip` | Android（Termux） | Termux + `pkg install python` |
+| `dnd-ai-table-0.1.0-source.zip` | 想读源码 / 自己构建 | — |
+
+三个包都能在 [Releases](https://github.com/cinnabarpath9/dnd-ai-table/releases/latest) 和上面的网盘拿到（两个项目共用一个网盘目录）。
+
+解压后：
+
+- Windows：双击 **`启动-Windows.bat`**
+- macOS / Linux：`bash 启动-macOS-Linux.sh`
+- Android：`bash 启动-Termux.sh`
+
+浏览器会自动打开 `http://127.0.0.1:8770/`；没有自动打开就手动复制这个地址。
+包里的 `说明.txt` 写了装 Python、换端口、接真模型的步骤。
+
+> ⚠️ 这几个包**不带 Python 运行时**（所以只有 4.8 MB）：先装 Python 3.11+，再双击启动。
+> 以后可能会做免装 Python 的 Windows 单体包，现在还没做——没测过的东西不放出来。
+
+---
+
 ## 快速开始
 
-需要 Python 3.11+（本机用 3.14 跑）。**不需要**任何第三方服务，假模型全程离线。
+需要 Python 3.11+（开发机用 3.14 跑）。**不需要**任何第三方服务，假模型全程离线。
+在源码目录里直接跑（下载包里的目录结构相同）：
 
 ```powershell
 cd dnd-ai-table

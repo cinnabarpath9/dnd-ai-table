@@ -39,3 +39,6 @@ desktop.ini
 tests/_logs/
 tests/_last_report.json
 tests/_profiles/
+# 打包产物（网盘包）
+dist/
+dist-exe/

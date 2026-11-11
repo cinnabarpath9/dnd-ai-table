@@ -23,6 +23,7 @@ import sys
 import threading
 import time
 import urllib.request
+import webbrowser
 
 for _s in (sys.stdout, sys.stderr):
     try:
@@ -1974,6 +1975,8 @@ def main() -> int:
     ap.add_argument("--port", type=int, default=8770)
     ap.add_argument("--auto", action="store_true",
                     help="自带假浏览器跑完（无人值守；仍走 HTTP）")
+    ap.add_argument("--open", action="store_true",
+                    help="启动后自动用默认浏览器打开页面（打不开时手动复制打印的地址）")
     ap.add_argument("--adventure", default=DEFAULT_ADV)
     ap.add_argument("--save-dir", default=None,
                     help="存档目录（默认 saves/mock；--real 时默认 saves/real）")
@@ -2112,6 +2115,16 @@ def main() -> int:
         print(f"  座位：真模型 {args.model}（上限 {args.max_calls} 次调用，"
               f"真人座位仍是网页）")
     print("=" * 78)
+
+    if args.open:
+        # 服务已经监听成功再开浏览器；拿不到默认浏览器就只是打印失败，不影响服务。
+        def _open() -> None:
+            time.sleep(0.8)
+            try:
+                webbrowser.open(server.url)
+            except Exception:                            # noqa: BLE001
+                print(f"  （自动开浏览器失败，请手动打开 {server.url}）")
+        threading.Thread(target=_open, daemon=True).start()
 
     driver = None
     if args.auto:
